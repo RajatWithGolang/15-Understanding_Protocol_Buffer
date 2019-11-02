@@ -1,0 +1,25 @@
+syntax ="proto3";
+
+message Person{
+    int32 id = 1;
+    string first_name = 2;
+    string last_name =3;
+    bytes small_Picture = 4;
+    bool is_Validated = 5;
+    float height = 6;
+    repeated int32 phone_number = 7;
+    EyeColor eye_color = 8;
+    enum EyeColor{
+        UNKNOWN_EYE_COLOR = 0;
+        EYE_BLUE = 1;
+        EYE_BROWN = 2;
+        EYE_GREEN = 3;
+    } 
+    Date dob = 9;
+}
+message Date{
+    int32 year = 1;
+    int32 month =2;
+    int32 day =3;
+
+}

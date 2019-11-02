@@ -1,0 +1,32 @@
+syntax ="proto3";
+
+import "07A-package_Date.proto"; // Always us fully Qualified path of your root of the project
+
+package person;
+
+message Person{
+    int32 id = 1;
+    string first_name = 2;
+    string last_name =3;
+    bytes small_Picture = 4;
+    bool is_Validated = 5;
+    float height = 6;
+    repeated int32 phone_number = 7;
+    EyeColor eye_color = 8;
+    enum EyeColor{
+        UNKNOWN_EYE_COLOR = 0;
+        EYE_BLUE = 1;
+        EYE_BROWN = 2;
+        EYE_GREEN = 3;
+    } 
+    myDate.Date dob = 9; // use Date Package
+    repeated Address addresss = 10;
+    message Address{
+        string street = 1;
+        string city = 2;
+        string state = 3;
+        string zip = 4;
+        string country = 5;
+
+    }
+}
